@@ -13,6 +13,10 @@ namespace PraktyczneKursy.DAL
 
         public KursyContext() : base("KursyContext")
         {
+
+        }
+        static KursyContext() {
+            Database.SetInitializer<KursyContext>(new KursyInitializer());
         }
         public virtual DbSet<Kurs> Kursy { get; set; }
         public virtual DbSet<Kategoria> Kategorie { get; set; }
