@@ -7,11 +7,11 @@ namespace PraktyczneKursy.Models
     public class Kategoria
     {
         public int KategoriaId { get; set; }
-        [Required(ErrorMessage = "Wprowadź nazwę kategorii")]
+        [Required(ErrorMessage = "Wprowadz nazwę kategorii")]
         [StringLength(100)]
-        public string NazwaKategori { get; set; }
-        [Required(ErrorMessage = "Wprowadź opis kategorii")]
-        public string OpisKategori { get; set; }
+        public string NazwaKategorii { get; set; }
+        [Required(ErrorMessage = "Wprowadz opis kategorii")]
+        public string OpisKategorii { get; set; }
         public string NazwaPlikuIkony { get; set; }
 
         public virtual ICollection<Kurs> Kursy { get; set; }

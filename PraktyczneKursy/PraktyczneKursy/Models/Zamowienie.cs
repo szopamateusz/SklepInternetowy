@@ -8,35 +8,48 @@ namespace PraktyczneKursy.Models
 {
     public class Zamowienie
     {
-        public int ZamowienieId { get; set; }
+        public int ZamowienieID { get; set; }
 
-        [Required(ErrorMessage = "Wprowadź Imię")]
+        public string UserId { get; set; }
+        
+        [Required(ErrorMessage = "Wprowadz imię")]
         [StringLength(50)]
         public string Imie { get; set; }
-        [Required(ErrorMessage = "Wprowadź Nazwisko")]
+
+        [Required(ErrorMessage = "Wprowadz nazwisko")]
         [StringLength(50)]
         public string Nazwisko { get; set; }
-        [Required(ErrorMessage = "Wprowadź Ulicę")]
+
+        [Required(ErrorMessage = "Wprowadz adres")]
         [StringLength(100)]
-        public string Ulica { get; set; }
-        [Required(ErrorMessage = "Wprowadź Miasto")]
+        public string Adres { get; set; }
+
+        [Required(ErrorMessage = "Wprowadz miasto")]
         [StringLength(100)]
         public string Miasto { get; set; }
-        [Required(ErrorMessage = "Wprowadź Kod Pocztowy")]
+
+        [Required(ErrorMessage = "Wprowadz kod pocztowy")]
         [StringLength(6)]
         public string KodPocztowy { get; set; }
         public string Telefon { get; set; }
+
         public string Email { get; set; }
+
         public string Komentarz { get; set; }
+
         public DateTime DataDodania { get; set; }
+
         public StanZamowienia StanZamowienia { get; set; }
+
         public decimal WartoscZamowienia { get; set; }
 
-       List<PozycjeZamowienia> PozycjeZamowienia { get; set; }
-
+        public List<PozycjaZamowienia> PozycjeZamowienia { get; set; }
     }
-    public enum StanZamowienia {
+
+
+    public enum StanZamowienia
+    {
         Nowe,
-        Zrealizowae
+        Zrealizowane
     }
 }
