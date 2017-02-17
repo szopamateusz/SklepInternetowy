@@ -4,18 +4,16 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 using PraktyczneKursy.Models;
+using PraktyczneKursy.Migrations;
+using System.Data.Entity.Migrations;
 
 namespace PraktyczneKursy.DAL
 {
-    public class KursyInitializer :DropCreateDatabaseAlways<KursyContext>
+    public class KursyInitializer :MigrateDatabaseToLatestVersion<KursyContext,Configuration>
     {
-        protected override void Seed(KursyContext context)
-        {
-            SeedKursyData(context);
-            base.Seed(context);
-        }
 
-        private void SeedKursyData(KursyContext context)
+
+        public static void SeedKursyData(KursyContext context)
         {
             var kategorie = new List<Kategoria> {
                 new Kategoria() { KategoriaId=1, NazwaKategorii="Asp.Net", NazwaPlikuIkony="aspnet.png", OpisKategorii="programowanie w asp net" },
@@ -28,7 +26,7 @@ namespace PraktyczneKursy.DAL
 
 
             };
-            kategorie.ForEach(k => context.Kategorie.Add(k));
+            kategorie.ForEach(k => context.Kategorie.AddOrUpdate(k));
             context.SaveChanges();
 
             var kursy = new List<Kurs> {
@@ -55,7 +53,7 @@ namespace PraktyczneKursy.DAL
 
 
             };
-            kursy.ForEach(k => context.Kursy.Add(k));
+            kursy.ForEach(k => context.Kursy.AddOrUpdate(k));
             context.SaveChanges();
 
         }

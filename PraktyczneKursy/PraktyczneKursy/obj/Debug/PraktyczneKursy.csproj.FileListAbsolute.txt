@@ -48,3 +48,7 @@ C:\Users\mateu\Source\Repos\SklepInternetowy\PraktyczneKursy\PraktyczneKursy\bin
 C:\Users\mateu\Source\Repos\SklepInternetowy\PraktyczneKursy\PraktyczneKursy\obj\Debug\PraktyczneKursy.csprojResolveAssemblyReference.cache
 C:\Users\mateu\Source\Repos\SklepInternetowy\PraktyczneKursy\PraktyczneKursy\obj\Debug\PraktyczneKursy.dll
 C:\Users\mateu\Source\Repos\SklepInternetowy\PraktyczneKursy\PraktyczneKursy\obj\Debug\PraktyczneKursy.pdb
+C:\Users\mateu\Source\Repos\SklepInternetowy\PraktyczneKursy\PraktyczneKursy\obj\Debug\PraktyczneKursy.Migrations.InitialCreate.resources
+C:\Users\mateu\Source\Repos\SklepInternetowy\PraktyczneKursy\PraktyczneKursy\obj\Debug\PraktyczneKursy.csproj.GenerateResource.Cache
+C:\Users\mateu\Source\Repos\SklepInternetowy\PraktyczneKursy\PraktyczneKursy\obj\Debug\PraktyczneKursy.Migrations.dodaniePolaTest.resources
+C:\Users\mateu\Source\Repos\SklepInternetowy\PraktyczneKursy\PraktyczneKursy\obj\Debug\PraktyczneKursy.Migrations.usunieciePolaTest.resources

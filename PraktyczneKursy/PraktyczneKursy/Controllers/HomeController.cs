@@ -11,7 +11,7 @@ namespace PraktyczneKursy.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-
+    
         private KursyContext db = new KursyContext();
         public ActionResult Index()
         {
